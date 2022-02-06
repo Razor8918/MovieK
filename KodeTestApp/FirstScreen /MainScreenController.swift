@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainScreenController.swift
 //  KodeTestApp
 //
 //  Created by Георгий Попандопуло on 06.02.2022.
@@ -7,9 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+protocol MainScreenView: AnyObject {
     
+}
+
+
+
+final class MainScreenController: UIViewController {
+
+    var presenter: MainScreenPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,3 +26,8 @@ class ViewController: UIViewController {
 
 }
 
+
+
+extension MainScreenController: MainScreenView {
+    
+}
